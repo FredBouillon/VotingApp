@@ -50,7 +50,7 @@ describe('immutability', () => {
 		// }
 
 		function addMovie(currentState, movie) {
-			currentState.update('movies', movies => movies.push(movie));
+			return currentState.update('movies', movies => movies.push(movie));
 		}
 
 		it('is immutable', () => {
